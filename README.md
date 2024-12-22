@@ -103,9 +103,9 @@ Hasil dari model lstm yang telah di bangun
 
 
 #### 📊 Hasil Evaluasi Model LSTM
-   1. **Training Accuracy**: Signifikan hampir mencapai 100%.
-   2. **Validation Accuracy**: Stabil di sekitar 85%, menunjukkan kemampuan model untuk menggeneralisasi dengan baik.
-   3. **Testing Accuracy**: Sedikit lebih rendah (82%), yang dapat menunjukkan tantangan dalam generalisasi pada data yang lebih bervariasi atau berbeda dari data pelatihan.
+   1. **Training Accuracy**: Secara bertahap meningkat hingga mencapai sekitar 95%, menunjukkan bahwa model berhasil mempelajari pola pada data pelatihan dengan sangat baik.
+   2. **Validation Accuracy**: Stabil di kisaran 75%, yang mencerminkan kemampuan model untuk menggeneralisasi data validasi dengan baik meskipun tidak setinggi data pelatihan.
+   3. **Testing Accuracy**: Lebih rendah di kisaran 70%, menunjukkan adanya kesulitan model dalam menggeneralisasi pada data yang lebih beragam atau berbeda dari data pelatihan.
 
 #### 📝 Classification Report LSTM
 
@@ -121,20 +121,20 @@ Accuracy: 73%
 
 #### 📉 Grafik Akurasi LSTM
 
-![image](https://github.com/user-attachments/assets/3532e560-be20-4637-b592-70193d31c729)
+![image](![download1](https://github.com/user-attachments/assets/1b3ee0cc-ffa3-4008-926a-78e3c2a51368)
 
-Training accuracy meningkat secara signifikan dan mencapai hampir 100% setelah beberapa epoch. Testing accuracy stabil di sekitar 83%, menunjukkan adanya sedikit overfitting. 
+Training accuracy meningkat secara bertahap hingga mencapai sekitar 95% setelah beberapa epoch. Testing accuracy stabil di kisaran 75%, mengindikasikan adanya overfitting ringan. 
 
 #### 📉 Grafik Loss LSTM
 
-![image](https://github.com/user-attachments/assets/d513718a-6fd7-4602-93f9-fd5440756dc7)
+![image]![download2](https://github.com/user-attachments/assets/2488c9ab-c921-4d3a-b0d1-a8ca21fdc904)
 
-Training loss terus menurun secara konsisten. Testing loss meningkat setelah beberapa epoch, menandakan adanya overfitting. 
+Training loss menurun secara konsisten selama pelatihan. Namun, testing loss mulai meningkat setelah beberapa epoch, yang merupakan tanda bahwa model mengalami overfitting. 
 
 #### 🧩 Confusion Matrix 📊
 Hasil dari Confusion Matrix
 
-![image](https://github.com/user-attachments/assets/559b97a4-ca57-4b20-9808-1ab7881c06c5)
+![image]![download3](https://github.com/user-attachments/assets/a2c37592-bd72-4d0c-94b4-3d6c20f71f9f)
 
 ----
 
@@ -154,47 +154,46 @@ Berikut adalah ilustrasi struktur BERT:
 Pada tahap preprocessing  mencakup data cleaning untuk menghilangkan noise atau data yang tidak relevan, tokenisasi untuk memecah teks menjadi kata atau token, dan stopword removal untuk menghapus kata-kata yang tidak penting seperti "dan", "atau", dan "adalah". dilanjut dengan melakukan splitting dataset menjadi 2 (Training, dan Testing) sesuai dengan penjelasan pada Dataset.
 
 #### 📊 Hasil Evaluasi Model BERT
-1. **Training Accuracy**: Meningkat secara signifikan mecapai 95%.
-2. **Validation Accuracy**: Stabil di sekitar 80%-87%, mencerminkan kemampuan model untuk menggeneralisasi data yang tidak terlihat.
-3. **Testing Accuracy**: Sekitar 85%, menandakan bahwa model cukup baik dalam melakukan prediksi pada data baru setelah pelatihan.
+1. **Training Accuracy**: Mengalami peningkatan signifikan hingga mencapai 81%.
+2. **Validation Accuracy**: Stabil di sekitar 79%, menunjukkan kemampuan model untuk menggeneralisasi data yang belum terlihat.
+3. **Testing Accuracy**: Sekitar 78%, menandakan bahwa model memiliki kinerja yang baik dalam melakukan prediksi pada data baru setelah pelatihan.
 
 #### 📝 Classification Report BERT
 | Label | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-| 0     | 0.70      | 0.71   | 0.71     | 890     |
-| 1     | 0.67      | 0.73   | 0.70     | 1013    |
-| 2     | 0.93      | 0.90   | 0.91     | 4894    |
-
-Accuracy : 85%
+| 0     | 0.00      | 0.00   | 0.00     | 0       |
+| 1     | 0.00      | 0.00   | 0.00     | 241     |
+| 2     | 0.29      | 0.05   | 0.08     | 220     |
+| 3     | 0.50      | 0.01   | 0.01     | 300     |
+| 4     | 0.90      | 0.93   | 0.91     | 2787    |
+Accuracy : 73%
 
 #### 📉 Grafik BERT
 
 1. **Accuracy:**
    
-![image](https://github.com/user-attachments/assets/5ce50b4a-094e-4f37-8260-8fbc237ea297)
+![image]![download4](https://github.com/user-attachments/assets/1569ed33-bff4-4e8b-bdda-7bd4ccd5ccc3)
 
-Training accuracy meningkat hingga hampir 95%, sementara validation accuracy stabil di sekitar 85%-87%, menunjukkan model BERT dapat menggeneralisasi dengan baik.
+Training accuracy meningkat secara bertahap dan mencapai sekitar 81% setelah beberapa epoch. Validation accuracy stabil di kisaran 79%, menunjukkan bahwa model mampu mempertahankan generalisasi yang baik.
 
 3. **Loss:**
    
-![image](https://github.com/user-attachments/assets/c3bb8c68-adb4-4643-a7b7-b88acb4df143)
+![image]![download5](https://github.com/user-attachments/assets/e17bb6ab-78eb-4a98-ad7c-ff47d6c182a6)
 
-Training loss terus menurun, sementara validation loss sedikit meningkat, menunjukkan tanda overfitting ringan.
-
+Training loss terus menurun secara signifikan, menunjukkan bahwa model berhasil mempelajari data pelatihan dengan baik. Namun, validation loss cenderung meningkat setelah beberapa epoch, menandakan adanya potensi overfitting pada model.
 
 #### 🧩 Confusion Matrix 📊
 Hasil dari Confusion Matrix
 
-![image](https://github.com/user-attachments/assets/babcb283-66d9-4840-8b17-c7813e391b38)
-
+![image]![download6](https://github.com/user-attachments/assets/8f57a8a4-7521-41e9-a010-d79466fa9a1d)
 
 ## 📊 Hasil dan Analisis
 
 ### 📈 Perbandingan Performa Model
 | Model | Training Accuracy | Validation Accuracy | Testing Accuracy |
 |-------|-------------------|---------------------|------------------|
-| LSTM  | 90%               | 85%                 | 82%              |
-| BERT  |90%                | 80%-87%             | 85%              |
+| LSTM  | 95%               | 75%                 | 70%              |
+| BERT  | 81%               | 79%                 | 78%              |
 
 ---
 
@@ -202,17 +201,17 @@ Hasil dari Confusion Matrix
 
 1. **Akurasi** :
    - *LSTM* :
-     * Akurasi training mencapai 90% dan akurasi test mencapai 82%.
-     * Performa bagus dalam menangkap konteks temporal, namun terdapat bukti overfitting karena terdapat kesenjangan antara akurasi training dan test.
+     * Akurasi training mencapai 95% dan akurasi test mencapai 70%.
+     * menunjukkan bahwa model berhasil mempelajari pola pada data pelatihan dengan sangat baik.
    - *BERT*:
-     * Akurasi training meningkat menjadi 905% dan akurasi test mencapai 85%.
-     * Memahami konteks teks dua arah lebih baik daripada LSTM, sehingga menghasilkan generalisasi yang lebih kuat.
+     * Akurasi training meningkat menjadi 81% dan akurasi test mencapai 78%.
+     * Grafik menunjukkan peningkatan akurasi secara signifikan dari awal hingga akhir epoch. Hal ini menunjukkan bahwa model berhasil mempelajari pola dari data pelatihan dengan baik.generalisasi yang lebih kuat.
 
 2. **Loss**:
    - *LSTM*
-      * Loss training terus menurun, tetapi test pengujian meningkat setelah beberapa epoch. Hal ini menunjukkan bahwa model cenderung overfit. 
+      * meningkat setelah beberapa epoch, yang menandakan model mengalami overfitting.  
    - *BERT*
-     * Loss training terus menurun, dan peningkatan kerugian test relatif kecil, menunjukkan sedikit overfitting namun masih dapat dikelola. 
+     * Loss pada data pelatihan terus menurun secara konsisten seiring bertambahnya epoch. Ini menandakan bahwa model semakin baik dalam meminimalkan kesalahan selama pelatihan. 
  
  3. **Kemampuan generalisasi**:
     - *LSTM*
@@ -227,16 +226,16 @@ Hasil dari Confusion Matrix
       * Lebih baik dalam menangani konteks kompleks dan hubungan non-linier, memungkinkan dapat melakukan tugas analisis sentimen terperinci dengan lebih efektif.
 
 ### **Kesimpulan akhir**:
-Akurasi dan generalisasi yang lebih tinggi untuk analisis sentimen, **BERT** adalah pilihan yang lebih baik daripada **LSTM**. Namun, ketika sumber daya komputasi terbatas, **LSTM** tetap menjadi pilihan yang efisien dan cukup handal.
+Dari tabel perbandingan performa model, dapat dilihat bahwa LSTM menunjukkan akurasi pelatihan yang tinggi (95%), tetapi mengalami penurunan signifikan pada akurasi validasi (75%) dan pengujian (70%), yang mengindikasikan kemungkinan overfitting. Sementara itu, BERT memiliki akurasi pelatihan yang lebih rendah (81%) tetapi menunjukkan akurasi yang lebih konsisten pada data validasi (79%) dan pengujian (78%). Hal ini menunjukkan bahwa BERT lebih mampu generalisasi pada data yang tidak terlihat, menjadikannya pilihan yang lebih baik untuk tugas klasifikasi teks dalam konteks ini.
 
 ---
 
 ## 🔗 Link Live Demo
 Aplikasi web telah di-deploy dan dapat diakses melalui tautan berikut:  
-[Live Demo Aplikasi](https://uaplatihan.streamlit.app/)
+[Live Demo Aplikasi](https://UAP.streamlit.app/)
 
 
 ---
 
 ## 👨‍💻 Author  
-👨‍💻 [Nadiya Dewi Al Khlifi](https://github.com/Nadiyaal)
+👨‍💻 [Saniyya Ruzzy Marwa](https://github.com/marwasaniyya)
